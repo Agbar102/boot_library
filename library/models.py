@@ -17,7 +17,7 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=255, null=True, blank=True)
     isdn = models.CharField(max_length=255)
-    author = models.ForeignKey(Author , related_name='authors', on_delete=models.CASCADE)
+    author = models.ForeignKey(Author , related_name='books', on_delete=models.CASCADE)
     created_ad = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     public_date = models.DateField(null=True)
